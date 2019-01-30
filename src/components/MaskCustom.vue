@@ -1,9 +1,10 @@
 <template>
-  <div class="mask"></div>
+  <div class="mask-custom"></div>
 </template>
 
 <script>
 export default {
+  name: 'MaskCustom'
 }
 </script>
 

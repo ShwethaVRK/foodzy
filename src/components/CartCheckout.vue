@@ -1,8 +1,9 @@
 <template>
+<div class="cart-checkout">
   <div class="checkout-box">
     <ul class="checkout-list">
       <transition-group name="fade">
-      <li v-for="(food, index) in getFoodsInCart" :key="index" class="checkout-food">
+      <li v-for="(food, index) in getFoodsInCart" class="checkout-food">
         <img :src="food.image" alt="" class="food-image">
         <h3 class="food-name">{{ food.name }}</h3>
         <span class="food-price">Rs {{ food.price }},00 </span>
@@ -10,20 +11,22 @@
       </li>
       </transition-group>
     </ul>
-    <div v-if="!hasFood ()" class="checkout-message">
+    <div v-if="!hasFood()" class="checkout-message">
       <h3>No Foods List...</h3>
       <router-link to="./">Back to list of Foods List</router-link>
     </div>
-    <h3 class="total" v-if="hasFood ()">
+    <h3 class="total" v-if="hasFood()">
       Total: Rs {{ totalPrice() }}, 00
     </h3>
   </div>
+</div>
 </template>
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
+  name: 'CartCheckout',
   computed: {
     ...mapGetters([
       'getFoodsInCart'
@@ -34,14 +37,14 @@ export default {
     ...mapActions([
       'removeFood'
     ]),
-    hasFood () {
+    hasFood() {
       return this.getFoodsInCart.length > 0
     },
-    totalPrice () {
+    totalPrice() {
       return this.getFoodsInCart.reduce((current, next) =>
         current + next.price, 0)
     },
-    remove (index) {
+    remove(index) {
       this.removeFood(index)
     }
   }

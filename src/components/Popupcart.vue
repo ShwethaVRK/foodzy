@@ -1,13 +1,14 @@
 <template>
+  <div class="popupcart">
   <div class="box">
-    <span v-if="!hasFood ()">No food items :/</span>
+    <span v-if="!hasFood()">No food items :/</span>
     <div v-for="(food, index) in getFoodsInCart"  :key="index" class="box-item">
       <img :src="food.image" alt="" class="item-thumb">
       <h3 class="item-name">{{ product.name }}</h3>
       <span class="item-amount">Amount: 1</span>
       <span class="item-price">Rs {{ food.price }}, 00</span>
     </div>
-    <div class="cart-info" v-if="hasFood ()">
+    <div class="cart-info" v-if="hasFood()">
       <span>Total: Rs {{ totalPrice() }}, 00</span>
       <router-link to="/checkout">
         <btn btnColor="btn btn-small btn-info"
@@ -17,6 +18,7 @@
       </router-link>
     </div>
   </div>
+  </div>
 </template>
 
 <script>
@@ -24,6 +26,7 @@ import { mapGetters, mapActions } from 'vuex'
 import btn from './Btn'
 
 export default {
+  name: 'Popupcart',
   components: {
     btn
   },
@@ -31,13 +34,13 @@ export default {
     ...mapActions([
       'showOrHiddenPopupCart'
     ]),
-    hasFood () {
+    hasFood() {
       return this.getProductsInCart.length > 0
     },
-    totalPrice () {
+    totalPrice() {
       return this.getProductsInCart.reduce((current, next) => current + next.price, 0)
     },
-    showPopupCart () {
+    showPopupCart() {
       this.showOrHiddenPopupCart()
     }
   },

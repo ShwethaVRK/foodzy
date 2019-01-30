@@ -1,5 +1,7 @@
 <template>
- <listOfFoods :products="getAllFood"/>
+<div class="all-foods">
+ <listOfFoods :foods="foodlist"/>
+</div>
 </template>
 
 <script>
@@ -7,13 +9,84 @@ import { mapGetters } from 'vuex'
 import listOfFoods from './ListOfFoods'
 
 export default {
+  name: 'AllFoods',
   components: {
     listOfFoods
   },
   computed: {
     ...mapGetters([
-      'getAllFood'
+      'getAllFoods'
     ])
+  },
+  data(){
+    return {
+      foodlist: [
+      {
+        'id': 1,
+        'name': 'Farm Pizza',
+        'price': 200,
+        'image': 'https://brave-hodgkin-b336b7.netlify.com/images/pizza.jpg',
+        'rating': 4.4,
+        'veg': true
+      },
+      {
+        'id': 2,
+        'name': 'Chicken Pizza',
+        'price': 300,
+        'image': './images/pizza2.jpeg',
+        'rating': 4.8,
+        'veg': false
+      },
+      {
+        'id': 3,
+        'name': 'Penne Pasta',
+        'price': 150,
+        'image': './images/pasta.jpg',
+        'rating': 4,
+        'veg': true
+      },
+      {
+        'id': 4,
+        'name': 'Salami Pasta',
+        'price': 200,
+        'image': './images/pasta2.jpeg',
+        'rating': 4,
+        'veg': false
+     },
+     {
+        'id': 5,
+        'name': 'Chocolate Moose',
+        'price': 170,
+        'image': './images/choco.jpg',
+        'rating': 3.4,
+        'veg': true
+      },
+    {
+        'id': 6,
+        'name': 'Veggie Wrap',
+        'price': 120,
+        'image': './images/wrap2.jpg',
+        'rating': 3.1,
+        'veg': true
+    },
+      {
+        'id': 7,
+        'name': 'Chicken Wrap',
+        'price': 160,
+        'image': './images/wrap.jpeg',
+        'rating': 4.1,
+        'veg': false
+    },
+    {
+        'id': 8,
+        'name': 'Burger Combo',
+        'price': 160,
+        'image': './images/burger.jpg',
+        'rating': 4.1,
+        'veg': false
+    }
+    ]
+    }
   }
 }
 </script>

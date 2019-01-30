@@ -1,13 +1,13 @@
 <template>
-  <div class="container">
+  <div id="app" class="container">
     <mainMenu>
       <btn btnColor="btn btn-small btn-info btn-popup"
          :cartIcon="true"
          @click.native="showPopupCart()">
          Cart
-        <span class="btn-circle" v-if="hasFood ()">
+        <!-- <span class="btn-circle" v-if="hasFood()">
            {{ getProductsInCart.length }}
-        </span>
+        </span> -->
       </btn>
       <transition name="appear">
         <popupcart class="cart" v-if="getPopupCart"/>
@@ -22,17 +22,18 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-import mainMenu from './components/Menu.vue'
-import btn from './components/Btn.vue'
-import popupcart from './components/Popupcart.vue'
-import maskBg from './components/Mask.vue'
+import MainMenu from './components/MainMenu.vue'
+import Btn from './components/Btn.vue'
+import Popupcart from './components/Popupcart.vue'
+import MaskCustom from './components/MaskCustom.vue'
 
 export default {
+  name: 'App',
   components: {
-    mainMenu,
-    btn,
-    popupcart,
-    maskBg
+    MainMenu,
+    Btn,
+    Popupcart,
+    MaskCustom
   },
   methods: {
     ...mapActions([

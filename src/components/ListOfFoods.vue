@@ -1,7 +1,8 @@
 <template>
+<div class="list-of-food">
   <ul class="listOfFoods">
     <li v-for="(food, index) in foods" :key="index" class="food">
-      <img :src="food.image" alt="">
+      <img :src="food.image"  width="100%" alt="">
       <router-link to="/food-details">
         <h2 class="food-name"
             @click="addCurrentFood(food)">
@@ -20,17 +21,22 @@
       </btn>
     </li>
   </ul>
+</div>
 </template>
 
 <script>
 import { mapActions } from 'vuex'
-import btn from './Btn'
+import Btn from './Btn'
 
 export default {
+  name: 'ListOfFood',
   props: ['foods'],
 
   components: {
-    btn
+    Btn
+  },
+  mounted(){
+    console.log(this.foods)
   },
 
   methods: {

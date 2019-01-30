@@ -3,7 +3,7 @@
 		"id": 1,
 		"name": "Farm Pizza",
 		"price": 200,
-		"image": "./images/pizza.jpg",
+		"image": "https://brave-hodgkin-b336b7.netlify.com/images/pizza.jpg",
 		"rating": 4.4,
 		"veg": true
 	},
@@ -11,7 +11,7 @@
 		"id": 2,
 		"name": "Chicken Pizza",
 		"price": 300,
-		"image": "./images/pizza2.jpeg",
+		"image": "https://brave-hodgkin-b336b7.netlify.com/images/pizza2.jpeg",
 		"rating": 4.8,
 		"veg": false
 	},

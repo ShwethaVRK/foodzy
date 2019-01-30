@@ -1,12 +1,15 @@
 <template>
+<div class="btn">
   <button :class="btnColor">
     <slot></slot>
     <img v-if="cartIcon" src="../assets/images/cart.svg" alt="Cart Icon">
   </button>
+</div>
 </template>
 
 <script>
 export default {
+  name: 'Btn',
   props: ['btnColor', 'cartIcon']
 }
 </script>

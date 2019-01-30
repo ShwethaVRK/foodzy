@@ -1,4 +1,5 @@
 <template>
+<div class="main-menu">
   <header class="header">
     <nav class="nav">
       <ul class="nav-links">
@@ -16,10 +17,12 @@
     </nav>
     <slot></slot>
   </header>
+</div>
 </template>
 
 <script>
 export default {
+  name: 'MainMenu'
 }
 </script>
 

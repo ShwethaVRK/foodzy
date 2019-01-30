@@ -1,4 +1,5 @@
 <template>
+<div class="food">
   <div class="food-box">
     <div class="food-image">
       <img :src="currentFood.image" alt="">
@@ -18,17 +19,19 @@
     </div>
     <modal>{{ currentFood.details }}</modal>
   </div>
+</div>
 </template>
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-import btn from './Btn'
+import Btn from './Btn'
 import stars from './Stars'
 import modal from './Modal'
 
 export default {
+  name: 'Food',
   components: {
-    btn,
+    Btn,
     stars,
     modal
   },

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="modal">
     <transition name="fade">
       <div class="modal" v-show="showModal">
         <h3>Details</h3>
@@ -17,12 +17,13 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-import btn from './Btn'
-import maskBg from './Mask'
+import Btn from './Btn.vue'
+import maskBg from './MaskCustom.vue'
 
 export default {
+  name:'Modal',
   components: {
-    btn,
+    Btn,
     maskBg
   },
 
