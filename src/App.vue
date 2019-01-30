@@ -6,7 +6,7 @@
          @click.native="showPopupCart()">
          Cart
         <!-- <span class="btn-circle" v-if="hasFood()">
-           {{ getProductsInCart.length }}
+           {{ getFoodsInCart.length }}
         </span> -->
       </btn>
       <transition name="appear">

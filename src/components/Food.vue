@@ -9,7 +9,7 @@
       <h2 class="food-title">{{ currentFood.name }}</h2>
       <span class="food-price">Rs {{ currentFood.price }}, 00</span>
       <btn btnColor="btn btn-large btn-sucess" :cartIcon="true"
-      @click.native="addFoodToCart (currentFood)">
+      @click.native="addFoodToCart(currentFood)">
         Buy Now
       </btn>
       <btn btnColor="btn btn-large btn-info"
@@ -25,15 +25,15 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import Btn from './Btn'
-import stars from './Stars'
-import modal from './Modal'
+import Stars from './Stars'
+import Modal from './Modal'
 
 export default {
   name: 'Food',
   components: {
     Btn,
-    stars,
-    modal
+    Stars,
+    Modal
   },
 
   computed: {
@@ -53,7 +53,7 @@ export default {
     rated (rate) {
       return `${rate * 20}%`
     },
-    openModal () {
+    openModal() {
       this.showOrHiddenModal()
     }
   }

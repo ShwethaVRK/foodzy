@@ -33,7 +33,7 @@ export default {
         'id': 2,
         'name': 'Chicken Pizza',
         'price': 300,
-        'image': './images/pizza2.jpeg',
+        'image': 'https://brave-hodgkin-b336b7.netlify.com/images/pizza2.jpeg',
         'rating': 4.8,
         'veg': false
       },
@@ -41,7 +41,7 @@ export default {
         'id': 3,
         'name': 'Penne Pasta',
         'price': 150,
-        'image': './images/pasta.jpg',
+        'image': 'https://brave-hodgkin-b336b7.netlify.com/images/pasta.jpg',
         'rating': 4,
         'veg': true
       },
@@ -49,7 +49,7 @@ export default {
         'id': 4,
         'name': 'Salami Pasta',
         'price': 200,
-        'image': './images/pasta2.jpeg',
+        'image': 'https://brave-hodgkin-b336b7.netlify.com/images/pasta2.jpeg',
         'rating': 4,
         'veg': false
      },
@@ -57,7 +57,7 @@ export default {
         'id': 5,
         'name': 'Chocolate Moose',
         'price': 170,
-        'image': './images/choco.jpg',
+        'image': 'https://brave-hodgkin-b336b7.netlify.com/images/choco.jpg',
         'rating': 3.4,
         'veg': true
       },
@@ -65,7 +65,7 @@ export default {
         'id': 6,
         'name': 'Veggie Wrap',
         'price': 120,
-        'image': './images/wrap2.jpg',
+        'image': 'https://brave-hodgkin-b336b7.netlify.com/images/wrap2.jpg',
         'rating': 3.1,
         'veg': true
     },
@@ -73,7 +73,7 @@ export default {
         'id': 7,
         'name': 'Chicken Wrap',
         'price': 160,
-        'image': './images/wrap.jpeg',
+        'image': 'https://brave-hodgkin-b336b7.netlify.com/images/wrap.jpeg',
         'rating': 4.1,
         'veg': false
     },
@@ -81,7 +81,7 @@ export default {
         'id': 8,
         'name': 'Burger Combo',
         'price': 160,
-        'image': './images/burger.jpg',
+        'image': 'https://brave-hodgkin-b336b7.netlify.com/images/burger.jpg',
         'rating': 4.1,
         'veg': false
     }

@@ -6,13 +6,12 @@
         <li class="link">
           <router-link to="/">AllFoods</router-link>
         </li>
-        <!--<li class="link">
-          <router-link to="/smartphones">Smartphones</router-link>
+        <li class="link">
+        <router-link to="/food-details">Food</router-link>
         </li>
         <li class="link">
-          <router-link to="/notebooks">Notebooks</router-link>
+        <router-link to="/checkout">Checkout</router-link>
         </li>
-        -->
       </ul>
     </nav>
     <slot></slot>
