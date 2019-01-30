@@ -2,11 +2,11 @@
   <div class="checkout-box">
     <ul class="checkout-list">
       <transition-group name="fade">
-      <li v-for="(food, index) in getFoodsInCart" :key="index" class="checkout-food">
+      <li v-for="{veg, rating, image, name, price, id}  in getFoodsInCart" :key="id" class="checkout-food">
         <img :src="food.image" alt="" class="food-image">
         <h3 class="food-name">{{ food.name }}</h3>
         <span class="food-price">Rs {{ food.price }},00 </span>
-        <button class="food-remove" @click="remove(index)">X</button>
+        <button class="food-remove" @click="remove(id)">X</button>
       </li>
       </transition-group>
     </ul>
@@ -41,8 +41,8 @@ export default {
       return this.getFoodsInCart.reduce((current, next) =>
         current + next.price, 0)
     },
-    remove (index) {
-      this.removeFood(index)
+    remove (id) {
+      this.removeFood(id)
     }
   }
 }

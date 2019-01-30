@@ -51,5 +51,4 @@ export default {
     max-width: 20px;
     margin-left: .5em;
   }
-
 </style>
