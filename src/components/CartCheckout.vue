@@ -7,7 +7,7 @@
         <img :src="food.image" alt="" class="food-image">
         <h3 class="food-name">{{ food.name }}</h3>
         <span class="food-price">Rs {{ food.price }},00 </span>
-        <button class="food-remove" @click="remove(index)">X</button>
+        <button class="food-remove" @click="remove(id)">X</button>
       </li>
       </transition-group>
     </ul>
@@ -46,7 +46,6 @@ export default {
     },
     remove(index) {
       this.removeFood(index)
-    }
   }
 }
 </script>
