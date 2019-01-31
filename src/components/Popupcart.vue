@@ -6,10 +6,10 @@
       <img :src="food.image" alt="" class="item-thumb">
       <h3 class="item-name">{{ product.name }}</h3>
       <span class="item-amount">Amount: 1</span>
-      <span class="item-price">Rs {{ food.price }}, 00</span>
+      <span class="item-price">Rs {{ food.price }}.00</span>
     </div>
     <div class="cart-info" v-if="hasFood()">
-      <span>Total: Rs {{ totalPrice() }}, 00</span>
+      <span>Total: Rs {{ totalPrice() }}.00</span>
       <router-link to="/checkout">
         <btn btnColor="btn btn-small btn-info"
           @click.native="showPopupCart()">

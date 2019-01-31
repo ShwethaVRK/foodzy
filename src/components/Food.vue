@@ -7,7 +7,7 @@
     </div>
     <div class="food-info">
       <h2 class="food-title">{{ currentFood.name }}</h2>
-      <span class="food-price">Rs {{ currentFood.price }}, 00</span>
+      <span class="food-price">Rs {{ currentFood.price }}.00</span>
       <btn btnColor="btn btn-large btn-sucess" :cartIcon="true"
       @click.native="addFoodToCart(currentFood)">
         Buy Now

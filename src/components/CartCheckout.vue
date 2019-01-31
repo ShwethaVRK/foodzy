@@ -3,11 +3,11 @@
   <div class="checkout-box">
     <ul class="checkout-list">
       <transition-group name="fade">
-      <li v-for="(food, index) in getFoodsInCart" :key="index" class="checkout-food">
+      <li v-for="food in foodlist" :key="food" class="checkout-food">
         <img :src="food.image" alt="" class="food-image">
         <h3 class="food-name">{{ food.name }}</h3>
-        <span class="food-price">Rs {{ food.price }},00 </span>
-        <button class="food-remove" @click="remove(id)">X</button>
+        <span class="food-price">Rs {{ food.price }}.00 </span>
+        <button class="food-remove" @click="remove(food)">X</button>
       </li>
       </transition-group>
     </ul>
@@ -16,7 +16,7 @@
       <router-link to="./">Back to list of Foods List</router-link>
     </div>
     <h3 class="total" v-if="hasFood()">
-      Total: Rs {{ totalPrice() }}, 00
+      Total: Rs {{ totalPrice() }}.00
     </h3>
   </div>
 </div>
@@ -27,6 +27,13 @@ import { mapGetters, mapActions } from 'vuex'
 
 export default {
   name: 'CartCheckout',
+  
+  data() {
+    return {
+            foods: ['id', 'name', 'price' , 'image' , 'rating' , 'veg']
+        };
+  },
+
   computed: {
     ...mapGetters([
       'getFoodsInCart'
