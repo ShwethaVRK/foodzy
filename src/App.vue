@@ -18,6 +18,9 @@
       <router-view></router-view>
     </transition>
     <maskBg v-if="getPopupCart" @click.native="showPopupCart()"/>
+  <div class="row">
+    <img v-for="img in images" v-bind:key="img"/>
+  </div>
   </div>
 </template>
 
@@ -36,6 +39,12 @@ export default {
     Popupcart,
     MaskCustom
   },
+    data() {
+      return {
+        images: ['./assets/bg.jpeg',
+        ]
+      }
+    },
   methods: {
     ...mapActions([
       'showOrHiddenPopupCart'
