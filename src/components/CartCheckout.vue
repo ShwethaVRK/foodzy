@@ -36,8 +36,13 @@ export default {
 
   computed: {
     ...mapGetters([
-      'getFoodsInCart'
+      'getFoodsInCart',
+      'getcartFood'
     ])
+  },
+
+  mounted() {
+    console.log(this.getcartFood)
   },
 
   methods: {

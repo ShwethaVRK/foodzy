@@ -46,7 +46,7 @@ export default {
 <style scoped>
   .modal {
     width: 100%;
-    max-width: 500px;
+    max-width:500px;
     height: 300px;
     box-sizing: border-box;
     padding: 1em;
@@ -71,7 +71,7 @@ export default {
   }
 
   .fade-enter-active, .fade-leave-active {
-    transition: all .7s;
+    transition: all .2s;
   }
   .fade-enter, .fade-leave-to {
     opacity: 0;

@@ -82,7 +82,8 @@ export default new Vuex.Store({
     getFoodsInCart: state => state.cartFoods,
     getCurrentFood: state => state.currentFood,
     getShowModal: state => state.showModal,
-    getPopupCart: state => state.showPopupCart
+    getPopupCart: state => state.showPopupCart,
+    getCartFood: state => state.cartFoods 
   },
 
   mutations: {
