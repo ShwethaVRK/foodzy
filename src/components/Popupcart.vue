@@ -2,7 +2,7 @@
   <div class="popupcart">
   <div class="box">
     <span v-if="!hasFood()">No food items :/</span>
-    <div v-for="(food, index) in getFoodsInCart"  :key="index" class="box-item">
+    <div v-for="food in getFoodsInCart"  :key="food" class="box-item">
       <img :src="food.image" alt="" class="item-thumb">
       <h3 class="item-name">{{ product.name }}</h3>
       <span class="item-amount">Amount: 1</span>
@@ -27,6 +27,13 @@ import btn from './Btn'
 
 export default {
   name: 'Popupcart',
+  
+   data() {
+    return {
+            foods: ['id', 'name', 'price' , 'image' , 'rating' , 'veg']
+        };
+  },
+
   components: {
     btn
   },

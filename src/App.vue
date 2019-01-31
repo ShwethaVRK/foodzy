@@ -1,5 +1,6 @@
 <template>
   <div id="app" class="container">
+    <img alt="Foodzy logo" class="center" src="./assets/logo.png">
     <mainMenu>
       <btn btnColor="btn btn-small btn-info btn-popup"
          :cartIcon="true"
@@ -62,6 +63,13 @@ export default {
     font-family: 'Roboto', sans-serif;
     background-color: #FAFAFA;
   }
+
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 
   a {
     color: #000;

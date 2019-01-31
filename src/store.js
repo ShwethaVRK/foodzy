@@ -73,8 +73,8 @@ export default new Vuex.Store({
     ], //
     cartFoods: [],
     currentFood: {},
-    showModal: false,
-    showPopupCart: false
+    showModal: true,
+    showPopupCart: true
   },
 
   getters: {
