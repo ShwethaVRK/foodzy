@@ -75,7 +75,7 @@ export default {
   }
 
   .food-image {
-    width: 300px;
+    width: 400px;
   }
 
   .food-info {

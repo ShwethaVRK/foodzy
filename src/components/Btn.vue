@@ -39,7 +39,7 @@ export default {
   }
 
   .btn-info {
-    background-color: #2D9CDB;
+    background-color: darkslategray;
   }
 
   .btn-sucess {
